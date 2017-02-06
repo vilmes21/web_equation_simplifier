@@ -1,0 +1,26 @@
+class_names = {
+"master_transform.rb" => "Transformation",
+  "final_beautify.rb" => "FinalBeautification",
+  "rebuid_polynomial.rb" => "Rebuilding",
+  "resolve_brackets.rb" => "Brackets",
+  "to_terms.rb" => "ToTerms",
+  "organize_vars.rb" => "OrganizeVars",
+  "initial_uglify.rb" => "InitialUglification",
+  "count_terms.rb" => "CountTerms",
+  "screen.rb" => "Screen",
+
+}
+
+
+Bug cases:
+"(a+(--b)) =8"
+----------------
+"result --> a-b-8 = 0"
+
+"(a+(-+b)) =8"
+---------------------
+"result --> a+b-8 = 0"
+
+"(a+(-b)) =8"
+---------------
+"result --> a-b-7 = 0" (correct but it's perhaps just lucky)

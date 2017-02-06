@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Awesome Equation Simplifier</title>
+  </head>
+
+  <body>
+
+
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li class="active">Data</li>
+        </ol>
+        ...
+        <div class="navbar-header">
+          <a href="">link</a>
+          <a href="">link</a>
+          <a href="">link</a>
+          <a href="">link</a>
+
+        </div>
+        <ul>
+          <li>one</li>
+          <li>one</li>
+          <li>one</li>
+        </ul>
+      </div>
+    </nav> -->
+
+
+
+
+
+
+
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand text-danger" href="#">
+              <img src="http://is5.mzstatic.com/image/thumb/Purple111/v4/b3/9f/8b/b39f8b1f-960c-20f1-a774-3f4f1332c5ed/source/175x175bb.jpg" id="calc-logo" alt="calc-logo">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#section1">Instruction</a></li>
+                <li><a href="#section2">Contact</a></li>
+                <li><a href="#section3">About</a></li>
+                <li>&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <h1>Welcome, please type your input equation:</h1>
+
+      <%= yield %>
+    </div>
+
+
+
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  </body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  $('#simplify').click(function(e) {
+    e.preventDefault();
+    console.log("eq mode clicked");
+    var userInput = $('#eq_input').val();
+    // console.log("user input is", userInput);
+    $.post("/result", {eq_input: userInput},
+      function(final_res) {
+        alert(final_res);
+    });
+  });
+
+  $('#convert').click(function() {
+    console.log("file mode clicked");
+    $.post("/file_result", {file_path: $('#file_input').val()},
+      function(final_res) {
+        alert(final_res);
+    });
+  });
+
+
+});
+</script>
