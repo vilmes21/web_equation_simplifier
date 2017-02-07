@@ -1,6 +1,6 @@
 body {
   padding-top: 70px;
-  background: pink;
+  background: grey;
   /*background-image: url(http://scienceblogs.com/startswithabang/files/2013/02/2xcluster.jpg);*/
 }
 
@@ -9,15 +9,23 @@ body {
   width: 30px;
 }
 
+.btn-container{
+  text-align: center;
+  /*margin: 0 auto;*/
+  /*padding-right: auto;*/
+}
+
+
+
 /*FOR BTNS BEGIN*/
-* {
+/** {
     margin: 0;
     padding: 0;
   	-moz-box-sizing: border-box;
 		-o-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-	}
+	}*/
 
 	/*body {
 		width: 100%;
