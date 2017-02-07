@@ -19,7 +19,7 @@ post '/result' do
   p res
   p "+++++++++++++++"
   # DEBUGGING END
-  
+
   return res
 end
 
@@ -43,7 +43,7 @@ post '/file_result' do
     2.times {puts ""}
     puts e
     puts "Please try again."
-    return failure_notice = "#{e} Please try again."
+    return failure_notice = "#{e}, please try again."
   end
 
 end

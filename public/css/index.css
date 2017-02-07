@@ -1,7 +1,31 @@
 body {
   padding-top: 70px;
   background: grey;
+  /*min-height: 1300px;*/
   /*background-image: url(http://scienceblogs.com/startswithabang/files/2013/02/2xcluster.jpg);*/
+  background-image: url(https://s-media-cache-ak0.pinimg.com/736x/87/9d/6d/879d6dc0bc637b372a85dbc881b3584c.jpg);
+  /*background-size: cover;*/
+  /*background-position: center;*/
+}
+
+/*.navbar-fixed-top{
+  background-color: grey;
+  height: 30px;
+}*/
+
+.main-content{
+  background: rgba(43, 41, 29, 0.68);
+  padding: 3em;
+  min-height: 300px;
+  /*margin-top: 300px;*/
+}
+
+#result-section{
+  color: white;
+}
+
+#clear-board{
+  float: right;
 }
 
 #calc-logo{
@@ -9,8 +33,15 @@ body {
   width: 30px;
 }
 
+#pg-title{
+  text-align: center;
+  margin-bottom: 2em;
+  color: white;
+}
+
 .btn-container{
   text-align: center;
+  margin-top: 2em;
   /*margin: 0 auto;*/
   /*padding-right: auto;*/
 }
@@ -178,3 +209,40 @@ body {
 
 	}
 /*FOR BTNS END source: http://codepen.io/sethabbott/pen/FtuLz*/
+
+/*FOR INSTRUCTION MODAL BEGIN*/
+.modal-content{
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/High-Res-White-Glitter-Background.jpg);
+}
+
+.modal-header .modal-title{
+  text-align: center;
+}
+
+.modal-body{
+  /*background: #80a027; !important*/
+  background: rgba(61, 160, 39, 0.43); !important
+}
+/*FOR INSTRUCTION MODAL END*/
+
+/*FOR .social BAR BEGIN*/
+.social{
+  margin-top: 100px;
+  background: orange;
+  padding: 3.5em;
+  text-align: center;
+}
+/*FOR .social BAR END*/
+
+footer{
+  padding: 3em;
+  /*position: absolute;*/
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+#copy-r{
+  /*float: right;*/
+  text-align: right;
+}
