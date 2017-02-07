@@ -1,7 +1,20 @@
 body {
   padding-top: 70px;
-  background: pink;
-  /*background-image: url(http://scienceblogs.com/startswithabang/files/2013/02/2xcluster.jpg);*/
+  background-image: url(https://s-media-cache-ak0.pinimg.com/736x/87/9d/6d/879d6dc0bc637b372a85dbc881b3584c.jpg);
+}
+
+.main-content{
+  background: rgba(43, 41, 29, 0.68);
+  padding: 3em;
+  min-height: 300px;
+}
+
+#result-section{
+  color: white;
+}
+
+#clear-board{
+  float: right;
 }
 
 #calc-logo{
@@ -9,30 +22,20 @@ body {
   width: 30px;
 }
 
+#pg-title{
+  text-align: center;
+  margin-bottom: 2em;
+  color: white;
+}
+
+.btn-container{
+  text-align: center;
+  margin-top: 2em;
+}
+
+
+
 /*FOR BTNS BEGIN*/
-* {
-    margin: 0;
-    padding: 0;
-  	-moz-box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-	/*body {
-		width: 100%;
-		height: 100%;
-		font-family: "helvetica neue", helvetica, arial, sans-serif;
-		font-size: 13px;
-		text-align: center;
-		background: #333 url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png');
-	}
-
-	ul {
-		margin: 30px auto;
-		text-align: center;
-	}*/
-
 	li {
 		list-style: none;
 		position: relative;
@@ -170,3 +173,37 @@ body {
 
 	}
 /*FOR BTNS END source: http://codepen.io/sethabbott/pen/FtuLz*/
+
+/*FOR INSTRUCTION MODAL BEGIN*/
+.modal-content{
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/High-Res-White-Glitter-Background.jpg);
+}
+
+.modal-header .modal-title{
+  text-align: center;
+}
+
+.modal-body{
+  background: rgba(61, 160, 39, 0.43); !important
+}
+/*FOR INSTRUCTION MODAL END*/
+
+/*FOR .social BAR BEGIN*/
+.social{
+  margin-top: 100px;
+  background: orange;
+  padding: 3.5em;
+  text-align: center;
+}
+/*FOR .social BAR END*/
+
+footer{
+  padding: 3em;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+#copy-r{
+  text-align: right;
+}

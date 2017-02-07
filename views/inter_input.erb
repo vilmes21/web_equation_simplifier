@@ -1,26 +1,42 @@
 <ul class="nav nav-tabs nav-justified">
-  <li class=""><a data-toggle="tab" href="#eq-mode">Type Input</a></li>
-  <li><a data-toggle="tab" href="#file-mode">Convert Files</a></li>
+  <li class=""><a id="eq-mode-tab" data-toggle="tab" href="#eq-mode">
+    <strong>
+      <i class="fa fa-exchange" aria-hidden="true"></i>
+      Type Input
+    </strong>
+  </a></li>
+  <li><a data-toggle="tab" href="#file-mode">
+    <strong>
+      <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+      Convert Files
+    </strong>
+  </a></li>
 </ul>
 
 <div class="tab-content">
   <div id="eq-mode" class="tab-pane fade">
-     <form action="result" method="post">
-       <input class="form-control"type="text" name="eq_input" id="eq_input" value="" placeholder="Enter your equation, e.g.   -3x^7 + 8b^-3 -9 = 783y + 77 -(3+7ab)"/>
-       <!-- <input class="btn btn-primary"type="submit" id="simplify" value="Simplify">  -->
-       <hr>
+     <input class="form-control"type="text" name="eq_input" id="eq_input" value="" placeholder="Enter your equation, e.g.   -3x^7 + 8b^-3 -9 = 783y + 77 -(3+7ab)"/>
 
+     <ul class="btn-container">
        <li><a class="round green" id="simplify">Simplfy !<span class="round">Ready to witness the greatness of our simplifier?</span></a></li>
-
-     </form>
+     </ul>
   </div>
+  <!-- closing #eq-mode -->
 
   <div id="file-mode" class="tab-pane fade">
     <input class="form-control" type="text" name="file_input" id="file_input" placeholder="Enter your file path, e.g.  ./input_example.txt"/>
-    <!-- <button class="btn btn-primary" id="convert">Convert Whole File!</button>  -->
-    <hr>
 
-    <li><a class="round red" id="convert">Convert !<span class="round">Your whole file of equations will be simplified! </span></a></li>
-
+    <ul class="btn-container">
+      <li><a class="round red" id="convert">Convert !<span class="round">Your whole file of equations will be simplified! </span></a></li>
+    </ul>
   </div>
+  <!-- closing #file-mode -->
 </div>
+<!-- closing .tab-content -->
+
+<div id="result-section"></div>
+
+<button class="btn btn-danger" id="clear-board">
+  <i class="fa fa-eraser" aria-hidden="true"></i>
+  Clear Result Board
+</button>
