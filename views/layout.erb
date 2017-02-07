@@ -11,12 +11,15 @@
 
   <body>
 
-
     <%= erb :nav %>
 
     <div class="container">
       <div class="main-content">
-        <h1 id="pg-title">Awesome Equation Simplifier &copy;</h1>
+        <h1 id="pg-title">
+          <i class="fa fa-calculator" aria-hidden="true"></i>
+          Awesome Equation Simplifier
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+        </h1>
 
         <%= yield %>
 
@@ -28,40 +31,7 @@
 
     <%= erb :about %>
 
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
-
-<script type="text/javascript">
-$(document).ready(function() {
-
-  $('#simplify').click(function(e) {
-    e.preventDefault();
-    console.log("eq mode clicked");
-    var inputField = $('#eq_input');
-    var userInput = inputField.val();
-    // console.log("user input is", userInput);
-    $.post("/result", {eq_input: userInput},
-      function(final_res) {
-        // alert(final_res);
-        $('#result-section').append(`<h2>Result:</h2> Input: ${userInput} <br /> Output: ${final_res}`);
-        inputField.val('');
-    });
-  });
-
-  $('#convert').click(function() {
-    // console.log("file mode clicked");
-    $.post("/file_result", {file_path: $('#file_input').val()},
-      function(final_res) {
-        // alert(final_res);
-        $('#result-section').append(`<h2>Result:</h2> ${final_res}`);
-        inputField.val('');
-    });
-  });
-
-  $('#clear-board').click(function(){
-    $('#result-section').html('');
-  });
-
-});
-</script>
