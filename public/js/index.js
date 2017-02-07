@@ -32,7 +32,6 @@ $(document).ready(function() {
 
     $.post("/file_result", {file_path: userInput},
       function(final_res) {
-        // alert(final_res);
         $('#result-section').append(`<h2>File Conversion Result:</h2> ${final_res}`);
         inputField.val('');
     });
